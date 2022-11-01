@@ -1,5 +1,5 @@
 build:
-	cargo build --$(target)
+	cargo build --release
 
 install:
 	cp -rf target/release/rat /usr/bin/rat
