@@ -1,6 +1,6 @@
 # Maintainer: matteac <mateoeestn2@gmail.com>
 pkgname=rat
-pkgver=0.1.r5.62b211c
+pkgver=0.1.r6.50b8a49
 pkgrel=1
 epoch=
 pkgdesc="cat written in rust"
@@ -38,7 +38,7 @@ build() {
 
 package() {
     cd rat
-	mkdir -p ${pkgdir}/opt/${pkgname}
+	sudo mkdir -p ${pkgdir}/opt/${pkgname}
     cp -rf * ${pkgdir}/opt/${pkgname}
     
     make install
