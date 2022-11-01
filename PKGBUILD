@@ -1,6 +1,6 @@
 # Maintainer: matteac <mateoeestn2@gmail.com>
 pkgname=rat
-pkgver=0.1.r16.9171208
+pkgver=0.1
 pkgrel=1
 epoch=
 pkgdesc="cat written in rust"
