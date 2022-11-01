@@ -8,7 +8,13 @@ use std::{
 };
 
 fn main() {
-    let file = env::args().nth(1).unwrap();
+    let file = match env::args().nth(1) {
+        Some(s) => s,
+        None => {
+            println!("rat: Argument required");
+            exit(1)
+        }
+    };
 
     let file_content: String = match fs::read_to_string(&file) {
         Ok(s) => s,
