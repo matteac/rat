@@ -1,6 +1,6 @@
 # Maintainer: matteac <mateoeestn2@gmail.com>
 pkgname=rat
-pkgver=0.1.r14.c28ecdb
+pkgver=0.1.r15.2342cf9
 pkgrel=1
 epoch=
 pkgdesc="cat written in rust"
@@ -32,16 +32,15 @@ pkgver() {
 }
 
 build() {
-    cd rat
-	make
+	cd rat
+    make
 }
 
 package() {
-    cd rat
-    ls
+    cd rat  
     mkdir -p ${pkgdir}/opt/${pkgname}
     cp -rf * ${pkgdir}/opt/${pkgname}
-
-	make PREFIX=$pkgdir/usr DESTDIR="${pkgdir}" install
+    make PREFIX=/usr DESTDIR="${pkgdir}" install
     install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
 }
+
