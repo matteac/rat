@@ -2,7 +2,7 @@ build:
 	cargo build --release
 
 install:
-	cp -rf target/release/rat /usr/bin/rat
+	cp -f target/release/rat /usr/bin/rat
 
 uninstall:
 	rm -rf /usr/bin/rat
