@@ -8,7 +8,7 @@ use std::{
 };
 
 fn main() {
-    let file = match env::args().nth(1) {
+    let arg = match env::args().nth(1) {
         Some(s) => s,
         None => {
             println!("rat: Argument required");
@@ -16,16 +16,21 @@ fn main() {
         }
     };
 
-    let file_content: String = match fs::read_to_string(&file) {
+    if arg == "--version" {
+        println!("rat v0.1");
+        exit(0)
+    }
+
+    let file_content: String = match fs::read_to_string(&arg) {
         Ok(s) => s,
         Err(_) => {
-            println!("\nrat: {}: No such file or directory", file.bright_green());
+            println!("\nrat: {}: No such file or directory", arg.bright_green());
             exit(2)
         }
     };
     let file_lines: Vec<&str> = file_content.split("\n").collect();
 
-    let abs_path = absolute_path(&file).unwrap();
+    let abs_path = absolute_path(&arg).unwrap();
     println!("\n\tFile: {}\n", abs_path.to_string_lossy().bold());
     for index in 0..file_lines.len() {
         let i = index + 1;

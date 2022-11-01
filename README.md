@@ -8,14 +8,10 @@ git clone https://github.com/matteac/rat.git
 cd rat
 ```
 
-Build
+Make
 ```bash
-cargo build --release
-```
-
-And copy
-```bash
-sudo cp ./target/release /usr/bin/
+make
+sudo make install
 ```
 
 And now you can run it!
