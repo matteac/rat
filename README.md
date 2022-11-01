@@ -2,6 +2,15 @@
 Cat written in Rust because everyone knows that Rust is blazingly fast and Cat is blazingly slow
 
 ## Installation
+
+### Arch Linux
+you can install rat from the AUR repository
+```bash
+yay -Sy rat
+```
+
+
+### From Source
 First clone this repo
 ```bash
 git clone https://github.com/matteac/rat.git
