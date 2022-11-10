@@ -1,5 +1,5 @@
 # rat
-Cat written in Rust because everyone knows that Rust is blazingly fast and Cat is blazingly slow
+Bat without wings
 
 ## Installation
 
