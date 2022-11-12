@@ -24,7 +24,7 @@ fn main() {
     let file_content: String = match fs::read_to_string(&arg) {
         Ok(s) => s,
         Err(_) => {
-            println!("\nrat: {}: No such file or directory", arg.bright_green());
+            println!("\n{}: {}: No such file or directory", "rat".bright_green(), arg.bright_red());
             exit(2)
         }
     };
